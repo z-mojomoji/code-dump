@@ -1,0 +1,220 @@
+.btn-thin-lightgrey {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+color: #111111;
+cursor: pointer;
+padding: 0 10px;
+text-decoration: none;
+border: solid 1px rgba(68,68,68,0.09);
+box-shadow: 0 1px 1px rgba(0,0,0,.56), inset 0 1px 1px 0px rgba(255,255,255,.5);
+-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.56), inset 0 1px 1px 0px rgba(255,255,255,.5);
+-moz-box-shadow: 0 1px 1px rgba(0,0,0,.56), inset 0 1px 1px 0px rgba(255,255,255,.5);
+background-color: #f3f3f3;
+background-image: -webkit-linear-gradient(bottom, #ececec, #FFF);
+background-image: -moz-linear-gradient(bottom, #ececec, #FFF);
+background-image: -o-linear-gradient(bottom, #ececec, #FFF);
+background-image: -ms-linear-gradient(bottom, #ececec, #FFF);
+background-image: linear-gradient(to top, #ececec, #FFF);
+}
+
+.left_btn {
+display: inline-block;
+border-radius: 5px 0 0 5px;
+padding: 0 5px;
+margin-right: -5px;
+}
+
+.right_btn {
+display: inline-block;
+border-radius: 0 5px 5px 0;
+padding: 0 5px;
+}
+
+.btn-thin-lightgrey i {
+	background-image: url(/assets/board/images/icon_boardindex.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+.btn_createnew {
+background-position: 0 -28px;
+}
+
+.btn_readmore {
+background-position: -19px -28px;
+}
+
+.btn-thin-lightgrey span {
+font-size: 14px;
+line-height: 24px;
+vertical-align: middle;
+font-family: 'supermarket';
+}
+
+.list_last_topic .last_list_date:hover{background: none;}
+.list_last_topic .last_list_date{
+    border-bottom: dashed 1px #d7d7d7;
+    color: #F37A01;
+    cursor: default;
+    font-size: 18px;
+    height: 32px;
+    line-height: 24px;
+    margin-top: 15px;
+    min-width: 98%;
+    padding-left: 0;
+}
+.list_last_topic .last_list_date i{
+    background-image: url(/assets/board/images/icon_boardindex.png);
+    background-position: 0 -50px;
+    width: 37px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: top;
+}
+.list_last_topic .last_list_date span{padding-left: 5px;}
+.list_last_topic li{
+    /*height: 46px;*/
+    padding: 5px;
+    /*line-height: 34px;*/
+}
+.list_last_topic li.bgf9f9f9{background-color: #f9f9f9;}
+.list_last_topic li.empty{
+    color: #C3C3C3;
+    font-size: 12px;
+    height: 16px;
+    line-height: 35px;
+    min-width: 90%;
+    padding-left: 62px;
+}
+.list_last_topic li.photo:hover{background-color: #ebebeb !important;}
+.list_last_topic li.text:hover{background-color: #d2f069 !important;}
+.list_last_topic li .list_1cat, .list_last_topic li .list_2title, .list_last_topic li .list_3owner, .list_last_topic li .list_4vcm{vertical-align: top; display: inline-block;}
+.list_last_topic li .list_1cat{width: 55px;}
+.list_last_topic li .list_2title{	width: 520px;}
+.list_last_topic li .list_3owner{	width: 180px;}
+.list_last_topic li .list_4vcm{cursor:default;}
+.list_last_topic li a{text-decoration: none;}
+.list_last_topic li span{overflow: hidden; vertical-align: middle; display: inline-block;}
+.list_last_topic li i{
+    display: inline-block; 
+    vertical-align: middle;
+    background-image: url(/assets/board/images/icon_boardindex.png);
+    background-repeat: no-repeat;
+}
+.list_last_topic li .list_1cat:hover span{color: #f05f01;}
+
+.list_last_topic li .list_1cat i{
+    width: 16px;
+    height: 14px;
+}
+.list_last_topic li .list_1cat span{
+    font-size: 10px;
+    line-height: 10px;
+    color: #f37a01;
+    width: 34px;
+}
+.list_last_topic li .list_2title span{
+    font-size: 15px;
+    color: #636363;
+    width: 500px;
+    line-height: 18px;
+    /*max-height: 33px;*/
+}
+.list_last_topic li .list_2title i, .list_last_topic li.photo .timefade1, .list_last_topic li.photo .timefade2, .list_last_topic li.photo .timefade3, .list_last_topic li.photo .timefade4, .list_last_topic li.photo .timefade5{
+    height: 11px;
+    margin-top: 6px;
+    vertical-align: top;
+    width: 15px;
+}
+.list_last_topic li .list_2title:hover span, .list_last_topic li.photo .photo_title:hover{color: #362f2d;}
+.list_last_topic li .list_2title:visited span, .list_last_topic li.photo .photo_title:visited{color: #c67a2f;}
+
+.list_last_topic li .timefade1{background-position: 0 -80px;}
+.list_last_topic li .timefade2{background-position: -17px -80px;}
+.list_last_topic li .timefade3{background-position: -34px -80px;}
+.list_last_topic li .timefade4{background-position: -51px -80px;}
+.list_last_topic li .timefade5{background-position: -67px -80px;}
+.list_last_topic li .timefade1, .list_last_topic li .timefade2, .list_last_topic li .timefade3, .list_last_topic li .timefade4, .list_last_topic li .timefade5, .list_last_topic li.photo .timefade1, .list_last_topic li.photo .timefade2, .list_last_topic li.photo .timefade3, .list_last_topic li.photo .timefade4, .list_last_topic li.photo .timefade5{
+    position: relative;
+}
+.list_last_topic li .timefade1:hover .time_edited, .list_last_topic li .timefade2:hover .time_edited, .list_last_topic li .timefade3:hover .time_edited, .list_last_topic li .timefade4:hover .time_edited, .list_last_topic li .timefade5:hover .time_edited, .list_last_topic li.photo .timefade1:hover .time_edited, .list_last_topic li.photo .timefade2:hover .time_edited, .list_last_topic li.photo .timefade3:hover .time_edited, .list_last_topic li.photo .timefade4:hover .time_edited, .list_last_topic li.photo .timefade5:hover .time_edited{ 
+    display: block;
+}
+.list_last_topic li .time_edited{
+    display: none;
+    height: 32px;
+    color: #d7d7d7;
+    font-size: 11px;
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    left: -62px;
+    width: 135px;
+    background-image: url(/assets/board/images/label_showtimeedit.png);
+    background-repeat: no-repeat;
+}
+
+.list_last_topic li .list_3owner span{
+    font-size: 11px;
+    white-space: nowrap;
+    width: 95px;
+}
+.list_last_topic.list_photo li .list_3owner span {
+    width: 150px;
+}
+.list_last_topic li a.list_3owner span, .list_last_topic li.photo li a.list_3owner span{color: #f37a01;}
+.list_last_topic li a.list_3owner:hover span, .list_last_topic li.photo li a.list_3owner:hover span{color: #f05f01;}
+.list_last_topic li span.list_3owner span, .list_last_topic li.photo li span.list_3owner span{color: #b6722e;}
+.list_last_topic li .list_3owner i, .list_last_topic .list_3oi, .list_last_topic li.photo .list_3owner i{
+    width: 10px;
+    height: 10px;
+    background-position: -85px -31px;
+}
+.list_last_topic li .list_4vcm span, .list_last_topic li.photo .photo_vcm span{
+    font-size: 11px;
+    color: #959595;
+    white-space: nowrap;
+}
+.list_last_topic li .list_4vcm .listvi, .list_last_topic li.photo .listvi{width: 15px; height: 9px; background-position: -83px -65px;}
+.list_last_topic li .list_4vcm .listvs{width: 60px;}
+.list_last_topic li .list_4vcm .listcmi, .list_last_topic li.photo .listcmi{  background-position: -83px -48px;
+                                                                              height: 11px;
+                                                                              width: 13px;}
+.list_last_topic li .list_4vcm .listcms{width: 18px;}
+
+.list_last_topic .list_loading:hover, #right_hotlist li.list_loading:hover, #right_realtime li.list_loading:hover, .list_last_topic li.photo li.list_loading:hover{background: none;}
+.list_last_topic .list_loading, #right_hotlist li.list_loading, #right_realtime li.list_loading, .list_last_topic li.photo li.list_loading{
+    text-align: center;
+    /*min-width: 98%;*/
+    padding: 10px;
+}
+.list_last_topic .list_loading a, #right_hotlist li.list_loading a, #right_realtime li.list_loading a, .list_last_topic li.photo li.list_loading a{
+    display: inline-block;
+    width: 130px;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 24px;
+}
+.list_last_topic .list_loading i, #right_hotlist li.list_loading i, #right_realtime li.list_loading i, .list_last_topic li.photo li.list_loading i{background-position: -97px -29px; padding-left: 3px;}
+
+.list_last_topic li .list_2title .topic_spe1, .list_last_topic li .list_2title .topic_spe2, .list_last_topic li .list_2title .topic_spe3, .list_last_topic li.photo .photo_vcm .topic_spe1, .list_last_topic li.photo .photo_vcm .topic_spe2, .list_last_topic li.photo .photo_vcm .topic_spe3{
+    width: 18px;
+    height: 17px;
+    background-image: url(/assets/board/images/icon_boardindex.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    float:left;
+}
+.list_last_topic li .list_2title .topic_spe1, .list_last_topic li.photo .photo_vcm .topic_spe1{background-position: -1px -134px;}
+.list_last_topic li .list_2title .topic_spe2, .list_last_topic li.photo .photo_vcm .topic_spe2{background-position: -25px -134px;}
+.list_last_topic li .list_2title .topic_spe3, .list_last_topic li.photo .photo_vcm .topic_spe3{background-position: -49px -134px;}
+.list_last_topic li .list_2title:hover .topic_spe1, .list_last_topic li.photo li:hover .topic_spe1{background-position: -72px -134px;}
+.list_last_topic li .list_2title:hover .topic_spe2, .list_last_topic li.photo li:hover .topic_spe2{background-position: -96px -134px;}
+.list_last_topic li .list_2title:hover .topic_spe3, .list_last_topic li.photo li:hover .topic_spe3{background-position: -120px -134px;}

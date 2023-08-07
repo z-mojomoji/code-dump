@@ -1,0 +1,616 @@
+@import '../fonts/museosans/museosans.css';
+@import '../fonts/museosans-rounded/museosansrounded.css';
+@import '../fonts/opensans/open-sans.css';
+
+@mixin VerticalAlign {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+}
+
+
+@mixin ellipsis($font-size, $line-height,$lines:1) {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if ($lines == 1) {
+        white-space: nowrap;
+        height: $line-height;
+    } @else {
+        height: $line-height*$lines; /* Fallback for non-webkit */
+    }
+}
+
+
+.Container {
+    width: 1260px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 75px;
+
+    .Event & ,
+    .Header & {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        justify-content: space-between;
+    }
+}
+
+.Header {
+    top: 0px;
+    max-height: 80px;
+    z-index: 999;
+    width: 100%;
+    padding-top: 24px;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding-bottom: 24px;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 1);
+
+    &-logo {
+        width: 14%;
+        @include VerticalAlign;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &--sticky {
+        background-color: rgba(255, 255, 255, 0.93);
+        position: fixed;
+        top: 0 !important;
+
+        & + .HeroBanner {
+            margin-top: 91px;
+        }
+    }
+}
+
+.NavigationBar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+
+    &::after {
+        content: '';
+        clear: both;
+        opacity: 0;
+        height: 0;
+        display: block;
+    } 
+
+    &-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        right: 22px;
+        top: 0;
+        width: 30px;
+        -webkit-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        transition: all 200ms ease-in;
+
+        span {
+            width: 30px;
+            height: 4px;
+            margin-bottom: 6px;
+            border-radius: 100px;
+            background: #8f8f8f;
+            display: block;
+        }
+    }
+
+    &-list {
+        list-style: none;
+        overflow: hidden;
+        text-align: right;
+        float: right;
+        margin: 0;
+        padding: 0;
+
+        &Item {
+            display: inline-block;
+            margin-left: 35px;
+            line-height: 1.5;
+        }
+    }
+
+    &-link {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'MuseoSans', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &--open {
+        max-height: 400px !important;
+
+        .NavigationBar-toggle {
+            transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+        }
+    }
+}
+
+.Button {
+    padding: 15px 24px;
+    vertical-align: middle;
+    font-family: 'MuseoSans', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 14px;
+    border-radius: 3px;
+    -webkit-radius: 3px;
+    -moz-radius: 3px;
+    transition: all 0.3s ease 0s;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-lined {
+        border: 2px solid #aedfde;
+        color: #5ebfbd;
+
+        &:hover {
+            background-color: #aedfde;
+            color: white;
+        }
+    }
+
+    &-primary {
+        color: white;
+        background-color: #61c0bd;
+        &:hover {
+            background-color: #5fcbc8;
+            color: white;
+        }
+    }
+
+    &--inline {
+        display: inline-block;
+    }
+}
+
+
+
+.HeroBanner {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 210px;
+    padding: 85px 0 75px;
+    text-align: center; 
+    color: white;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+    .Container{
+        padding: 0 245px;
+    }
+
+    .heading1 {
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: white;
+        margin: 30px auto;
+        line-height: 35px;
+    }
+
+    p {
+        line-height: 26px;
+    }
+}
+
+.title {
+    font-size: 50px;
+    margin: 0px 0 30px;
+    line-height: 43px;
+    font-family: "MuseoSansRounded", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-family: "MuseoSans", Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: #7d7d81;
+    font-weight: 500;
+    padding-bottom: 36px;
+}
+
+.heading1 {
+    font-family: "MuseoSans", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #5b6172;
+    font-weight: 700;
+    &--green {
+        color: #61c0bd;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.Seperator {
+
+    &--bright{
+        border-bottom: 1px solid #d9dadd;
+    }
+
+    &--dark {
+        border-bottom: 1px solid #575b64;
+    }
+
+    &--lg {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+
+    &--md {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.Row {
+    padding: 35px 0;
+    &:nth-child(2n) {
+        background-color: white;
+    }
+
+    &:nth-child(2n+1) {
+        background-color: #f1f2f5;
+    }
+}
+
+.Event {
+    &-info {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+    }
+
+    &-location {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    &-register {
+        min-width: 115px;
+        @include VerticalAlign;
+    }
+}
+
+.GetInvolve{
+    &-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &Item{
+            width: calc(36.7% - 60px);
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            text-align: center;
+            &:nth-child(3n+2) {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &-icon {
+        zoom: 50%;
+        display: block;
+        margin: 0 auto 20px;
+        @include VerticalAlign;
+
+        &Container {
+            min-height: 128px;
+        }
+    }
+
+    &-content {
+        min-height: 37px;
+        padding: 10px 0;
+    }
+
+    .Button {
+        margin: 15px auto 10px;
+        min-width: 205px;
+    }
+}
+
+.MissionMembers {
+    &-text {
+        text-align: center;
+    }
+
+    .heading1 {
+        text-align: center;
+        padding: 30px 0;
+        font-weight: 500;
+    }
+}
+
+.Mission {
+    &-card {
+        position: relative;
+        background-color: white;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 85px;
+        padding: 70px 20px 35px;
+        margin: 45px 0 20px; 
+        width: calc(33% - 60px);
+        text-align: center;
+
+        &:nth-child(3n+2) {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .heading1 {
+            color: #5dc0c9;
+            padding: 0 0 20px;
+        }
+    }
+
+    &-icon {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 40px);
+        background-color: #57c0d5;
+        text-align: center;
+        border-radius: 50%;
+        -webkit-radius: 50%;
+        -moz-radius: 50%;
+            border: 10px solid white;
+
+        img {
+            display: inline-block;
+            zoom: 50%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.Member {
+    &-container {
+        &.owl-carousel .owl-stage-outer {
+            padding-bottom:25px;
+        }
+    }
+}
+
+.LogoSlider{
+    &-logo {
+        .owl-centered & {
+            width: 50% !important;
+            margin: auto;
+            display: block;
+        }
+    }
+}
+
+//Customize owl carousel 
+
+.owl-centered .owl-wrapper {
+  display: table !important;
+}
+.owl-centered .owl-item {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+.owl-centered .owl-item > .LogoSlider-logoContainer {
+  text-align: center;
+}
+
+.Blog {
+    &-container {
+        position: relative;
+    }
+    
+    &-story {
+        padding:0 15px;
+    }   
+
+    &-title {
+        font-weight: 700;
+        color: #61c0bd;
+        font-size: 14px;
+        text-align: left;
+        border-bottom: 1px solid #f1f2f5;
+        padding-bottom: 13px;
+        @include ellipsis(14px, 16px);
+    }
+    
+    &-summary {
+        margin: 22px 0;
+        &Text {
+            @include ellipsis(14px, 22px, 4);
+        }
+    }
+
+    &-publishDate {
+        border-top: 1px solid #f1f2f5;
+        padding-top: 20px;
+    }
+
+    &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 48px;
+        color: #5fc0c3;
+
+        &:hover{
+            color: #52d3d7;
+        }
+
+        &Left {
+            left: -20px;
+        }
+
+        &Right {
+            right: -20px;
+        }
+    }
+}
+
+
+.Footer {
+    background-color: #454850;
+    color: #979eb1;
+    text-align: center;
+    padding: 30px 0 20px;
+
+    &-icon {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        margin: 0px 10px;
+    }
+
+    a {
+        color: #5dc0c9;
+    }
+}
+
+.showd {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 766px) {
+
+    .Header {
+        max-height: 35px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        text-align: left;
+        &-logo {
+            width: 145px;
+            display: block;
+            max-height: 25px;
+        }
+    }
+
+    .Container {
+        width: 100%;
+        padding: 0 20px;
+        .Event & ,
+        .Header & {
+            display: block;
+        }
+
+        .HeroBanner & {
+            padding: 0 8%;
+        }
+    }
+
+    .NavigationBar {
+        width: 100%;
+        display: block;
+        &-list {
+            padding-top: 18px;
+            margin-bottom: 22px;
+            float: none;
+            text-align: center;
+            width: 100%;
+
+            &Item {
+                width: 100%;
+                padding: 7px 0;
+                margin: 0;
+            }
+        }
+
+        &-toggle {
+            display: block;
+        }
+    }
+
+    .HeroBanner {
+        padding: 30px 0;
+        .heading1 {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    .title {
+        font-size: 8vw;
+        line-height: 9vw;
+    }
+
+    .Event{
+        &-info {
+            text-align: center;
+            display: block;
+            margin: 0px auto;
+            .heading1--green {
+                display: block;
+                line-height: 30px;
+            }
+        }
+
+        &-register {
+            display: block;
+            margin: 20px auto 0;
+            text-align: center;
+        }
+    }
+
+    .GetInvolve {
+        &-list {
+            &Item {
+                width: 100%;
+                &:nth-child(3n+2) {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+
+    .Mission {
+        &-card {
+            width: 100%;
+            
+            box-sizing: border-box;
+            &:nth-child(3n+2) {
+                margin: 45px 0 20px;
+            }
+        }
+    }
+
+    .showd {
+        display: none;
+    }
+}

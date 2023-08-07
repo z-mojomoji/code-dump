@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Code starts*/
+
+@font-face {
+   font-family: 'supermarket';
+   src: url('http://www0.dek-d.com/font/supermarket.eot');
+   src: url('http://www0.dek-d.com/font/supermarket.eot?#iefix') format('embedded-opentype'), url('http://www0.dek-d.com/font/supermarket.woff') format('woff'), url('http://www0.dek-d.com/font/supermarket.ttf') format('truetype'), url('http://www0.dek-d.com/font/supermarket.svg#supermarketregular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+strong{
+    font-weight: bold !important;
+}
+
+
+.slider{
+    position: relative;
+    margin-top: 15px;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.showarea{
+    width: 980px;
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider a#left-ar{
+    position: absolute;
+    z-index: 10;
+    top: 162px;
+    left: -20px;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/left.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+.slider a#left-ar:hover{
+    background-position: 0px -46px;
+}
+
+.slider #right-ar{
+    position: absolute;
+    z-index: 10;
+    top: 162px;
+    right: -20px;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+.slider a#right-ar:hover{
+    background-position: 0px -46px;
+}
+
+.slider ul#inslide{
+    width: 10000px;
+    overflow: auto;
+    height: 380px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+}
+
+.slider ul#inslide li{
+    width: 980px;
+    overflow: auto;
+    height: 380px;
+    float: left;
+    padding-left: 10px;
+}
+
+
+.banner-img {
+    position: relative;
+    width: 288px;
+    height: auto;
+    overflow: hidden;
+    border: 6px solid #FFF;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow:    0px 4px 6px 0px rgba(50, 50, 50, 0.4);
+    box-shadow:         0px 4px 6px 0px rgba(50, 50, 50, 0.4);
+    margin: 10px 10px;
+    border-radius: 10px;
+    float: left;
+    
+}
+.banner-img img {
+    width: 100%;
+    padding: 0;
+}
+.banner-img > div.banner-big {
+    background-color: rgba(153,208,26,0.96);
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    -moz-text-shadow:    0px 2px 1px rgba(50, 50, 50, 0.20);
+    text-shadow:         0px 2px 1px rgba(50, 50, 50, 0.20);
+    color: #FFF;
+}
+
+.banner-img:hover > div.banner-big {
+    display: block;
+    opacity: 1.0;
+}
+
+.banner-img > div.banner-big p{
+    font-family: "supermarket";
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    width: 288px;
+}
+
+.banner-img > a.linkongreen{
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+p.top-text{
+    font-size: 22px;
+    text-align: center;
+     line-height: 1.2em !important;
+}
+
+p.desc-text{
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2em !important;
+}
+
+.banner-big div.title-desc{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    width:288px;
+}
+
+.banner-big p{
+    position: relative;
+    left: -50%;
+    top: -50%;
+}
+
+.banner-big div.formore{
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    color: #eeffc6;
+}
+
+.banner-big div.formore{
+    left: 50%;
+    bottom: 10px;
+}
+
+#slider-page{
+    background-image: url(../images/slider-buttom.png);
+    background-position: center -8px;
+    width: 100%;
+    padding-top: 15px;
+    min-height: 44px;
+}
+
+#slider-page #pages{
+    width: 115px;
+    height: 10px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+#slider-page #pages ul{
+    list-style: none;
+    margin: 0 auto;
+}
+
+#slider-page #pages ul li{
+    float: left;
+    display: block;
+    margin-right: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius:50%;
+}
+
+#slider-page #pages ul li a{
+    width: 9px;
+    height: 9px;
+    background-color: #cccccc;
+    border-radius:50%;
+    display: block;
+    cursor: pointer;
+}
+
+#slider-page #pages ul li a.active{
+    background-color: #99d01a;
+}
+

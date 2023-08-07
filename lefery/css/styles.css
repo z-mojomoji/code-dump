@@ -1,0 +1,444 @@
+@font-face {
+    font-family: 'Omyim';
+    src: url('font/psl114.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Omyim';
+    src: url('font/psl115.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Omyim';
+    src: url('font/psl116.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Omyim';
+    src: url('font/psl117.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Saikrok';
+    src: url('font/DB SaiKrok X.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saikrok';
+    src: url('font/DB SaiKrok X Li.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saikrok';
+    src: url('font/DB SaiKrok X Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5e9d3;
+    color: #575757;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Saikrok", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 25px 0;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Omyim","Saikrok", Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 22px;
+}
+
+.badge, .button, .button:visited {
+    padding: 7px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ab782e;
+    color: white;
+    text-align: center;
+    font-family: "Omyim",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 27px;
+    text-decoration: none;
+    min-width: 150px;
+    box-sizing: border-box;
+    line-height: 20px;
+}
+
+.button:hover {
+    background-color: #c9892d;
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    font-family: "Omyim","Saikrok", Arial, Helvetica, sans-serif;
+    padding-top: 85px;
+}
+
+.hero p {
+    font-size: 21px;
+}
+
+.hero-product {
+    background-image: url('../img/town.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 65px;
+    position:relative;
+}
+
+.hero-product .product {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.hero-product .brown-badge {
+    background-color: #6b2f2f;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    position: absolute;    
+    top: 120px;
+    left: calc(50% + 200px);
+}
+
+.hero-product .brown-badge p span{
+    display: block;
+    font-size: 23px;
+}
+
+.hero-product .brown-badge p{
+    display: block;
+    font-size: 32px;
+    margin: 0;
+    line-height: 21px;
+}
+
+.hero-cta h2 {
+    color: #4e3c28;
+}
+
+h2 {
+    font-size: 55px;
+    color: #ab782e;
+    font-weight: normal;
+    margin: 25px auto;
+    line-height: 38px;
+}
+
+h1 {
+    font-size: 95px;
+    color: #5c2004;
+    margin: 25px auto;
+    line-height: 68px;
+}
+
+h3 {
+    font-size: 40px;
+    color:#ab782e;
+    line-height: 30px;
+    margin: 0 0 20px; 
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 33px;
+    text-align: center;
+    color: #4e3c28;
+    position: relative;
+    display: inline-block;    
+    margin: 0 0 25px;
+    line-height: 26px;
+}
+
+.benefit-box {
+    width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f1e6;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    padding-left: 345px;
+    padding-right: 75px;
+    min-height: 265px;
+    margin-top: 40px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.benefit-box .yoona{
+    position: absolute;
+    left: 90px;
+    bottom: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.benefit-box ul li {
+    line-height: 14px;
+    padding-bottom: 18px;
+    font-weight: lighter;
+}
+
+.benefit-box p {
+    font-size: 25px;
+    margin: 0;
+    line-height: 28px;
+}
+
+.benefit-box .fa {
+    color: #6b2f2f;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.heading:after,
+.heading:before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/heading.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.heading:after {
+    right: -28px;
+}
+
+.heading:before {
+    left: -28px;
+}
+
+.heading {
+    position: relative;
+}
+
+.head-wrap {
+    text-align: center;
+}
+
+.tips {
+    text-align: center;
+    font-size: 26px;
+}
+
+.tips p {
+    margin: 0 0 10px;
+}
+
+.tips-badge {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    background-color:#895c37;
+    padding: 7px 6px;
+    box-sizing: border-box;
+    font-family: "Omyim","Saikrok", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 14px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.tips p.tips {
+    color: #4e3c28;
+}
+
+.seperator {
+    position: relative;
+}
+
+.seperator:after {
+    content: '';
+    background: #e9ddc7;
+    height: 1px;
+    width: 800px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.contact li {
+    width: 49.5%;
+    font-weight: bold;
+    display: inline-block;    
+    padding-bottom: 2px;
+}
+
+.contact-title {
+    text-align: center;
+    color: white;
+    background-color: #a27e60;
+    padding: 7px 6px;
+    box-sizing: border-box;
+    font-family: "Omyim","Saikrok", Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    font-size: 22px;
+    width: 110px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    margin-right: 7px;
+}
+
+footer {
+    background: #efdbba;
+    padding: 30px 0;
+    margin-top: 25px;
+}
+
+footer .container {
+    text-align: center;
+    font-size: 20px;
+    color: #575757;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+footer .container p {
+    margin: 0;
+}
+
+a ,
+a:hover,
+a:visited{
+    color: #575757;
+    text-decoration: none;
+}
+.showd {
+    display: block;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        width: 100%;
+        padding: 0 3%;
+        box-sizing: border-box;
+    }
+
+    .section {
+        padding: 5% 0;
+    }
+
+    .hero-product {
+        background-size: 80%;   
+    }
+
+    .hero-product .product {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        width: 80%;
+    }
+
+    .hero-product .brown-badge {
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    h2 {
+        font-size: 9vw;
+        margin: 2%;
+        line-height: 10vw;
+    }
+
+    h1 {
+        font-size: 14vw;
+        margin: 2% auto;
+        line-height: 11vw;
+    }
+
+    .benefit-box {
+        width: 100%;
+        padding-bottom: 0;
+        padding-left: 6%;
+        padding-right: 6%;
+        min-height: 0;
+        margin-top: 0;
+    }
+
+    .benefit-box .yoona{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+
+    .seperator {
+        position: relative;
+    }
+
+    .seperator:after {
+        content: '';
+        width: 80%;
+    }
+
+    .contact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact li {
+        width: 100%;
+    }
+    footer {
+        padding: 15px 0;
+        margin-top: 15px;
+    }
+
+    .showd {
+        display: none;
+    }
+}

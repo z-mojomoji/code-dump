@@ -1,0 +1,1440 @@
+/*******Reset*******/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol {
+   list-style: none;
+ }
+
+ol li {
+   counter-increment: item;
+   margin-bottom: 5px;
+    padding-left: 40px;
+    position: relative;
+    line-height: 1.4em;
+ }
+
+ol li:before {
+   margin-right: 10px;
+   content: counter(item);
+   background: #EAC753;
+   border-radius: 100%;
+   color: #FFF;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    padding-top: 3px;
+   text-align: center;
+/*   display: inline-block;*/
+    line-height: 1em;
+    position: absolute;
+    left: 10px;
+ }
+
+.img-responsive {
+    width: 100%;
+}
+
+/**********Fonts***********/
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-UltraLight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-UltraLightItali.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-LightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-SemiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ThaiSans';
+    src: url('../fonts/ThaiSansNeue-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/******Code start******/
+
+body {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #565656;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #565656;
+    width: 100%;
+    position: relative;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: bold !important;
+}
+
+.container {
+    width: 1086px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix::after,
+.container::after,
+ul.navBar::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.logo img {}
+
+.contact-details {
+    border-width: 320px;
+    margin-left: 90px;
+}
+
+.contact-details p {
+    padding: 10px 0px;
+    margin: 0;
+    font-size: 12px;
+    color: #b1b1b1;
+    line-height: 17px;
+}
+
+.yellow {
+    color: #EAC753;
+}
+
+.loginBlock {
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+.loginBlock a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 11px 0;
+    margin: 0px 10px;
+}
+
+.loginBlock a.loginBtn {
+    color: #FFF;
+}
+
+.loginBlock a.loginBtn:hover {
+/*    color: #fbe40f;*/
+    color: #fff061;
+}
+
+.loginBlock a.helpBtn {
+    color: #313131;
+    background-color: #fbe40f;
+    border-radius: 50px;
+    width: 160px;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.loginBlock a.helpBtn:hover {
+    background-color: #fff061;
+}
+
+/***Navigation Bar****/
+
+nav {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #6f6f6f;
+}
+
+ul.navBar {
+    margin: 0;
+    padding: 0;
+}
+
+ul.navBar li {
+    display: inline-block;
+    position: relative;
+}
+
+ul.navBar li>ul {
+    position: absolute;
+    z-index: 1;
+}
+
+ul.navBar li a {
+    font-family: 'ThaiSans', Arial, sans-serif;
+    font-weight: 300;
+    color: #FFF;
+    font-size: 23px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    display: block;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+ul.navBar li:hover a {
+    color: #313131;
+    font-weight: 300;
+}
+
+ul.navBar>li:hover {
+    background-color: #fbe40f;
+    -webkit-box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.8);
+}
+
+ul.navBar li>ul.subMenu {
+    display: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+ul.navBar li:hover>ul.subMenu {
+    display: block !important;
+    background-color: #fbe40f;
+    min-width: 200px;
+    text-align: left;
+    padding: 15px 20px;
+    -webkit-box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+ul.navBar li:hover>ul.subMenu li {
+    display: block;
+}
+
+ul.navBar li:hover>ul.subMenu li a {
+    text-shadow: none !important;
+    color: #313131;
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 0px;
+    text-align: left !important;
+}
+
+ul.navBar li:hover>ul.subMenu li:hover a {
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+/**Slider**/
+
+.slider .slick-dotted.slick-slider {
+    margin-top: 17px;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.slider .slick-dots {
+    bottom: -35px;
+}
+
+.galletSlider .slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.gallerySection .slick-dotted.slick-slider {
+    margin-top: 45px;
+}
+
+.slick-prev::before {
+    content: "\f104";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 25px;
+    text-rendering: auto;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-next::before {
+    content: "\f105";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 25px;
+    color: #333;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.contentArea {
+    margin-top: 85px;
+}
+
+
+/*****Slide menu*******/
+
+.leftCol,
+.sideMenu {
+    width: 200px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+ul.sideMenu li {
+    height: 70px;
+    width: 200px;
+    margin-bottom: 10px;
+    display: block;
+    font-family: "ThaiSans", Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 9px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+ul.sideMenu li a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+ul.sideMenu li h2,
+ul.sideMenu li span {
+    text-align: right;
+    color: #FFF;
+    display: block;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+ul.sideMenu li h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+ul.sideMenu li span {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+ul.sideMenu li.yellowMenu h2,
+ul.sideMenu li.yellowMenu span {
+    color: #313131;
+}
+
+ul.sideMenu li.yellowMenu {
+    background-image: url(../images/g-tab.png);
+    background-color: #fbe40f;
+}
+
+ul.sideMenu li.yellowMenu:hover {
+    background-color: #fff061;
+}
+
+ul.sideMenu li.greyMenu {
+    background-image: url(../images/y-tab.png);
+    background-color: #494a45;
+}
+
+ul.sideMenu li.greyMenu:hover {
+    background-color: #636460;
+}
+
+.businessArea h2 {
+    display: block;
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-size: 26px;
+    color: #313131;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 13px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fbe40f;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.businessArea ul.businessList {
+    position: relative;
+}
+
+.businessArea ul.businessList::before {
+    content: "$";
+    position: absolute;
+    font-family: "ThaiSans", Arial, sans-serif;
+    top: 0;
+    left: 0;
+    line-height: 48px;
+    font-size: 170px;
+    z-index: 0;
+    font-weight: bold;
+    color: #fefccd;
+}
+
+.businessArea ul.businessList li {
+    text-align: right;
+    font-family: "Tahoma", sans-serif;
+    color: #494a45;
+    position: relative;
+    z-index: 5;
+    padding-bottom: 10px;
+}
+
+.businessArea ul.businessList li a {
+    color: #494a45;
+}
+
+.businessArea ul.businessList li a:hover {
+    color: #e5d221;
+}
+
+
+/**RightCol**/
+
+.rightCol {
+    width: 846px;
+    position: relative;
+}
+
+.content h1 {
+    position: relative;
+    text-align: center;
+    color: #494a45;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "ThaiSans", Arial, sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.content h1::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: calc(50% - 62.5px);
+    background-color: #e5d221;
+    height: 1px;
+    width: 125px;
+}
+
+.content h1 span {
+    font-size: 22px;
+}
+
+.inner ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.inner ul li {
+    padding-left: 15px;
+    text-indent: -.7em;
+    margin-bottom: 5px;
+    line-height: 1.3em;
+}
+
+.inner ul li:before {
+    content: "• ";
+    color: #EAC753; /* or whatever color you prefer */
+}
+
+.content .small {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.content p {
+    line-height: 1.3em;
+}
+
+/*****Products*****/
+
+.productBox {
+    width: 404px;
+    height: 215px;
+    box-sizing: border-box;
+    position: relative;
+    /*    cursor: pointer;*/
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    position: relative;
+    padding: 25px 20px;
+    margin-top: 50px;
+    top: 0;
+}
+
+.productBox:nth-child(2n),
+.yellowBox:nth-child(2n) {
+    float: left;
+}
+
+.productBox:nth-child(2n+1),
+.yellowBox:nth-child(2n+1) {
+    float: right;
+}
+
+.productBox:hover {
+    -webkit-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    top: -8px;
+}
+
+.productBox .productDetail {
+    width: 185px;
+}
+
+.productBox .productDetail h2 {
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.productBox .productDetail p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    font-family: "Tahoma", sans-serif;
+}
+
+.productBox .productDetail p.price {
+    font-weight: bold;
+    color: #494a45;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.productBox .productDetail p.price span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e80000;
+}
+
+.productBox .productDetail a.moreDetails,
+.button {
+    font-weight: normal;
+    font-family: "ThaiSans", Arial, sans-serifs;
+    color: #494a45;
+    font-size: 18px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf34b+0,fbe510+100 */
+    background: rgb(252, 243, 75);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcf34b', endColorstr='#fbe510', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    border-radius: 20px;
+    padding: 5px 15px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
+    position: relative;
+    top: 0;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+}
+
+.productBox:hover .productDetail a.moreDetails,
+.button:hover {
+    -webkit-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.28);
+    top: -3px;
+}
+
+.productBox .productImg {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+.moreProduct {
+    position: relative;
+    text-align: center;
+    color: #494a45;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "ThaiSans", Arial, sans-serif;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    display: block;
+}
+
+.moreProduct::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 24px);
+    background-color: #e5d221;
+    height: 1px;
+    width: 48px;
+}
+
+.moreProduct:hover {
+    color: #909090;
+}
+
+
+/******Yellow Box*******/
+
+.yellowBox {
+    position: relative;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf34b+0,fbe510+100 */
+    background: rgb(252, 243, 75);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(252, 243, 75, 1) 0%, rgba(251, 229, 16, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcf34b', endColorstr='#fbe510', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 404px;
+    height: 145px;
+    box-sizing: border-box;
+    /*    cursor: pointer;*/
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    position: relative;
+    padding: 25px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    top: 0;
+}
+
+.yellowBox:hover {
+    -webkit-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.28);
+    top: -8px;
+}
+
+.yellowBox .yellowDetail {
+    width: 200px;
+}
+
+.yellowBox a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+.yellowBox h2 {
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid #FFF;
+}
+
+.yellowBox p {
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0.5em;
+}
+
+.yellowBox span {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: "ThaiSans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.girls {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+
+/****Footer*****/
+
+footer {
+    background-color: #494a45;
+    padding: 45px 0px 50px;
+    margin-top: 70px;
+}
+
+footer .container {
+    color: #dcdcdc;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+footer .container .column {
+    min-width: 147px;
+/*    min-width: 196px;*/
+    float: left;
+}
+
+footer .container .column li {
+    padding-bottom: 10px;
+}
+
+footer .container .column a {
+    color: #dcdcdc;
+}
+
+footer .container .column a:hover {
+    color: #fbe40f;
+}
+
+footer .container .column:first-child {
+    width: 200px;
+    margin-right: 41px;
+}
+
+footer .container .column span.copyright {
+    padding-top: 56px;
+    display: block;
+}
+
+footer .container .column:last-child {
+    width: 255px;
+    text-align: right;
+    float: right;
+}
+
+footer .container .column .title {
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+footer .container .column .row {
+    margin-bottom: 20px;
+}
+
+footer .container .column h2 {
+    font-family: "ThaiSans", Arial, sans-serif;
+    color: #FFF;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+footer .container .column h3 {
+    font-family: "ThaiSans", Arial, sans-serif;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+
+/********Registeration Form**********/
+
+form h4 {
+    padding: 1px;
+    color: #ACACAC;
+    font-size: 9pt;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+form {
+    margin-top: 50px;
+    width: 800px;
+    height: 530px;
+    background-color: #fff;
+    padding: 5px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+form p {
+    font-size: 12px;
+    clear: both;
+    margin: 0;
+    color: gray;
+    padding: 4px;
+}
+
+form fieldset.row1 {
+    width: 770px;
+    padding: 5px;
+    float: left;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+form fieldset.row1 label {
+    width: 140px;
+    float: left;
+    text-align: right;
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+form fieldset.row2 {
+/*    height: 220px;*/
+    margin-bottom: 15px;
+    padding: 5px;
+    float: left;
+}
+
+form fieldset.row3 {
+    padding: 5px;
+    float: left;
+    margin-bottom: 15px;
+    width: 400px;
+}
+
+form fieldset.row4 {
+    padding: 5px;
+    float: left;
+    clear: both;
+    width: 500px;
+}
+
+form .infobox {
+    float: right;
+    margin-top: 20px;
+    border: 1px solid #F1F1F1;
+    padding: 5px;
+    width: 380px;
+    height: 98px;
+    font-size: 9px;
+    background: #FFF;
+}
+
+form legend {
+    color: #e5d221;
+    padding: 2px;
+    margin-left: 14px;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+form label {
+    color: #444;
+    width: 98px;
+    float: left;
+    text-align: right;
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+form label.optional {
+    float: left;
+    text-align: right;
+    margin-right: 6px;
+    margin-top: 2px;
+/*    color: #A3A3A3;*/
+}
+
+form label.obinfo {
+    float: right;
+    padding: 3px;
+    font-style: italic;
+}
+
+form input {
+    width: 140px;
+    color: #505050;
+    float: left;
+    margin-right: 5px;
+}
+
+form input.long {
+    width: 215px;
+    color: #505050;
+}
+
+form input.longer {
+    width: 355px;
+    color: #505050;
+}
+
+form input.short {
+    width: 40px;
+    color: #505050;
+}
+
+form input[type=radio] {
+    float: left;
+    width: 15px;
+}
+
+form label.gender {
+    margin-top: -1px;
+    margin-bottom: 2px;
+    width: 34px;
+    float: left;
+    text-align: left;
+    line-height: 19px;
+}
+
+form input[type=text],
+form input[type=email]{
+    border: 1px solid #E1E1E1;
+    height: 18px;
+}
+
+form input[type=password] {
+    border: 1px solid #E1E1E1;
+    height: 18px;
+}
+
+.button {
+    border: none;
+    width: 200px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+form input[type=text].year {
+    border: 1px solid #E1E1E1;
+    height: 15px;
+    width: 40px;
+}
+
+form input[type=checkbox] {
+    width: 14px;
+    margin-top: 4px;
+}
+
+form select {
+    border: 1px solid #E1E1E1;
+    width: 130px;
+    float: left;
+    margin-bottom: 3px;
+    color: #505050;
+    margin-right: 5px;
+}
+
+form select.country {
+    width: 217px;
+}
+
+form select.date {
+    width: 40px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    background-color: #fefccd;
+}
+
+p.info {
+    font-size: 7pt;
+    color: gray;
+}
+
+p.agreement {
+    margin-left: 15px;
+}
+
+p.agreement label {
+    width: 390px;
+    text-align: left;
+    margin-top: 3px;
+}
+
+.row2.noneF {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 475px;
+}
+
+.noneF {
+    float: none !important;
+}
+
+form textarea {
+    width: 351px;
+    border: 1px solid #E1E1E1;
+}
+
+/****How to order****/
+
+.howtoBox {
+    width: 272px;
+    margin-left: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.howtoBox:first-child {
+    margin-left: 0;
+}
+
+.howtoBox .steps {
+    font-family: "ThaiSans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    color: #a5a6a4;
+    text-align: left;
+    line-height: 0.8em;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.howtoBox h4 {
+    font-size: 14px;
+    color: #EAC753;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0px;
+    line-height: 1.2em;
+}
+
+.howtoBox .stepDetail .conInfo{
+    padding-top: 10px;
+}
+
+.howtoBox .conInfo span {
+    display: block;
+    font-size: 13px;
+    color: #333;
+    padding-top: 5px;
+}
+
+.howtoBox .conInfo span a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+
+}
+
+.howtoBox span.y {
+    color: #EAC753;
+}
+
+.howtoBox .stepDetail .icon {
+    text-align: left;
+    background-image: url(../images/icon-bub.png);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    min-height: 35px;
+    font-size: 13px;
+    margin: 10px auto 0px;
+    width: 150px;
+}
+
+.ic-1 {
+    background-position: 0 -122px;
+}
+
+.ic-2 {
+    background-position: 0 -183px;
+}
+
+.ic-3 {
+    background-position: 0 -244px;
+}
+
+.ic-4 {
+    background-position: 0 -305px;
+}
+
+.ic-5 {
+    background-position: 0 -369px;
+}
+
+/***********Partnership***************/
+
+.partnetCon {
+    position: relative;
+}
+
+.partnerCon .p-img {
+    margin-top: 30px;
+}
+
+.partnerCon h4 {
+    margin: 30px auto 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.partnerCon h4 span {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.partnerCon h4 span.s {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.partnerCon .table {
+  margin: 0 0 40px 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .partnerCon .table {
+    display: block;
+  }
+}
+
+.partnerCon .row {
+  display: table-row;
+  background: #f6f6f6;
+}
+.partnerCon .row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+.partnerCon .row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #EAC753;
+}
+
+.partnerCon .cell.header {
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    width: 130px;
+    background: #EAC753;
+}
+
+.partnerCon .cell.header span {
+    position: absolute;
+    top: -5px;
+}
+
+@media screen and (max-width: 580px) {
+  .partnerCon .row {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+.partnerCon .table .row:first-child .cell{
+    padding: 6px 12px;
+    height: auto;
+}
+
+.partnerCon .cell {
+  padding: 12px;
+  display: table-cell;
+    font-weight: bold;
+    font-size: 14px;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 580px) {
+  .partnerCon .cell {
+    padding: 2px 12px;
+    display: block;
+  }
+}
+
+.partnerCon .priceBox {
+    position: absolute;
+    top: 310px;
+    text-align: center;
+    padding: 15px 40px;
+    right: 0;
+    color: red;
+    border: 1px solid #dcdcdc;
+    background-color: #f6f6f6;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4em;
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*********Product Details***********/
+
+.productDetails {
+    margin-top: 50px;
+}
+
+.thumbnail {
+    width: 350px;
+}
+
+.productTxt {
+    width: 480px;
+}
+
+.productDetails h2 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 5px;
+}
+
+.productDetails p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.productDetails ol {
+    margin-bottom: 20px;
+}
+
+.twoCol li {
+    float: left;
+    width: 45%;
+}
+
+/********Branch************/
+.branchWrap {
+    margin-top: 50px;
+}
+
+.branchWrap h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+}
+
+.branchWrap h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 5px;
+}
+
+.branchBox {
+    width: 420px;
+}
+
+.branchBox p {
+    line-height: 1.3em;
+    padding: 5px 0px;
+}
+
+.branchBox iframe {
+    margin-top: 10px;
+    width: 420px;
+    height: 250px;
+}
+
+/**********Career***********/
+.careerBox {
+    margin-top: 50px;
+}
+
+.careerBox h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+/********Thanks*********/
+
+.thanksCon {
+    margin-top: 50px;
+}
+
+.thanksBox h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+
+.thanksBox h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+
+#countdown {
+    color: #EAC753;
+    font-weight: bold;
+}
